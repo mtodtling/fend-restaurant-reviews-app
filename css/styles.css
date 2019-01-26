@@ -1,0 +1,288 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,td,th,p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #333;
+  line-height: 1.5;
+}
+body {
+  background-color: #fdfdfd;
+  margin: 0;
+  position:relative;
+}
+ul, li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #333;
+}
+a {
+  color: orange;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: red;
+  text-decoration: none;
+}
+a img{
+  border: none 0px #fff;
+}
+img {
+  max-width: 100%; /*Makes sure a picture doesn't overflow*/
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 0 20px;
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+#maincontent {
+  background-color: #f3f3f3;
+  min-height: 100%;
+}
+#footer {
+  background-color: #444;
+  color: white;
+  font-size: 8pt;
+  letter-spacing: 1px;
+  padding: 25px 0; /*Removes from both ends so it's aligned with the rest of the elements*/
+  text-align: center;
+  text-transform: uppercase;
+}
+/* ====================== Navigation ====================== */
+nav {
+  width: 100%;
+  background-color: #252831;
+}
+nav h1 {
+  margin: auto;
+  padding: 25px 0;
+  text-align: center;
+}
+nav h1 a {
+  color: #fff;
+  font-size: 12pt;
+  font-weight: 200;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 25px;
+}
+#breadcrumb {
+    padding: 10px 40px 16px;
+    list-style: none;
+    background-color: #eee;
+    font-size: 17px;
+    margin: 0;
+    width: calc(100% - 80px);
+}
+#breadcrumb li { /* Display list items side by side */
+    display: inline;
+}
+#breadcrumb li+li:before { /* Add a slash symbol (/) before/behind each list item */
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+#breadcrumb li a { /* Add a color to all links inside the list */
+    color: #0275d8;
+    text-decoration: none;
+    padding: 25px 0; /*Enlarges tapping area*/
+}
+#breadcrumb li a:hover { /* Add a color on mouse-over */
+    color: #01447e;
+    text-decoration: underline;
+}
+/* ====================== Map ====================== */
+#map-container {
+  height: 400px;
+  width: 100%;
+  background-color: #ccc;
+}
+#map {
+  height: 100%;
+  width: 100%;
+  background-color: #ccc;
+}
+/* ====================== Restaurant Filtering ====================== */
+#filter-options-container {
+  width: 100%;
+}
+.filter-options {
+  height: 100%;
+  width: 100%;
+  background-color: #3397DB;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.filter-options h2 {
+  color: #002b50;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+  padding: 15px 20px 0; /*Improves aesthetics*/
+}
+.filter-options select {
+  background-color: white;
+  border: 1px solid #fff;
+  font-family: Arial,sans-serif;
+  font-size: 11pt;
+  height: 35px;
+  letter-spacing: 0;
+  margin: 0 10px 20px;
+  padding: 0 10px;
+  width: 90%;
+  /*max-width: 278px;*/
+}
+/* ====================== Restaurant Listing ====================== */
+#restaurants-list {
+  background-color: #f3f3f3;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#restaurants-list li {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  font-family: Arial,sans-serif;
+  min-height: 380px;
+  margin: 10px 0;
+  /*padding: 25px;*/
+  width: 90%;
+}
+#restaurants-list .restaurant-img {
+  background-color: #ccc;
+  display: block;
+  margin: 15px auto;
+  max-width: 100%;
+  min-width: 50%;
+  /*min-height: 248px;*/
+}
+#restaurants-list li h1 {
+  color: #b36102;
+  font-family: Arial,sans-serif;
+  font-size: 14pt;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: 1.3;
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+}
+#restaurants-list p {
+  margin: 0;
+  font-size: 11pt;
+}
+#restaurants-list li a {
+  background-color: #b36102;
+  border-bottom: 3px solid #eee;
+  color: #fff;
+  display: inline-block;
+  font-size: 10pt;
+  margin: 15px 0;
+  padding: 8px 30px 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* ====================== Restaurant Details ====================== */
+.inside header {
+  position: -webkit-sticky;
+  position: sticky; /*Ensures header is always present*/
+  top: 0;
+  width: 100%;
+  z-index: 1001; /*On top of map elements*/
+}
+.inside #map-container {
+  background: blue none repeat scroll 0 0;
+  height: 400px;
+  width: 100%;
+}
+.inside #map {
+  background-color: #ccc;
+  height: 100%;
+  width: 100%;
+}
+.inside footer {
+  bottom: 0;
+  width: 100%;
+}
+#restaurant-data {
+  height: 100%;
+  width: 100%;
+}
+#restaurant-name {
+  color: #b36102;
+  font-family: Arial,sans-serif;
+  font-size: 20pt;
+  font-weight: 200;
+  letter-spacing: 0;
+  margin: 15px 20px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+#restaurant-img {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+#restaurant-address {
+  font-size: 12pt;
+  margin: 10px 20px 0px;
+}
+#restaurant-cuisine {
+  background-color: #333;
+  color: #ddd;
+  font-size: 12pt;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin: auto;
+  padding: 2px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 90%;
+}
+#restaurant-hours { /*Adds styling to the table*/
+  width: 90%;
+  margin: 5px 20px;
+}
+#restaurant-hours td, #restaurant-hours tr {
+  color: #666;
+}
+#restaurant-container, #reviews-container {
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #fff;
+  width: 100%;
+}
+#reviews-container h2 {
+  color: #b36102;
+  font-size: 24pt;
+  font-weight: 300;
+  letter-spacing: -1px;
+  padding-bottom: 1pt;
+  margin: 15px 20px;
+}
+#reviews-list {
+  margin: 15px 20px;
+  padding: 0;
+} 
+#reviews-list li {
+  background-color: #fff;
+  border: 2px solid #f3f3f3;
+  display: block;
+  list-style-type: none;
+  overflow: hidden;
+  margin: 15px 0;
+  position: relative;
+  width: 100%;
+}
+#reviews-list li p {
+  margin: 15px 20px;
+}
+/* ====================== Footer ====================== */
+#footer strong { /*Adds better tapping experience*/
+  padding: 20px 0;
+}
