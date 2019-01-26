@@ -1,7 +1,10 @@
 # Restaurant Reviews App Project
 
 ## Project Overview
-Static webpage was converted to a mobile-ready web application. Features added: 
+Static webpage was converted to a mobile-ready web application. 
+Starter repository: https://github.com/udacity/mws-restaurant-stage-1
+
+Features added: 
 - responsive design (responsive.css, styles.css)
 - accessibility (index.html, restaurant.html, main.js, restaurant_info.js)
 - availability (sw.js, main.js)
